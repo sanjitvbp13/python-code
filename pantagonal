@@ -1,0 +1,32 @@
+//patentagonal number
+//1,5,12,22,35,51,70,92,117,145,176,210,247,287,330,376,425,477,532,590
+
+
+
+
+import java.util.*;
+
+public class Main {
+    public static void Pantagonal(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int flag = 0;
+        
+        if (num == 1 || num == 5) {
+            System.out.println("Pentagonal");
+        } else {
+            for (int dif = 4, gen = 5; gen <= num; dif += 3, gen += dif) {
+                if (gen == num) {
+                    flag = 1;
+                    break;
+                }
+            }
+            
+            if (flag == 1) {
+                System.out.println("Pentagonal");
+            } else {
+                System.out.println("Not");
+            }
+        }
+    }
+}

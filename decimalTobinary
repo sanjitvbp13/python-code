@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        long binary = 0,place=1;
+        while(num>=1)
+        {
+          int rem= (int)((num%2));
+          binary= binary+(int)Math.pow(10,place)*rem;
+          place++;
+          num=num/2;
+        }
+        System.out.println(binary);
+    }
+}    
